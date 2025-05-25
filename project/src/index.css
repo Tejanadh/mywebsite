@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-kong-black-900 text-white font-poppins;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-montserrat font-bold;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply container mx-auto px-4 md:px-8 lg:px-12;
+  }
+  
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-8 md:mb-12 text-center;
+  }
+  
+  .section-subtitle {
+    @apply text-xl md:text-2xl font-semibold mb-4 text-kong-red;
+  }
+  
+  .btn {
+    @apply px-6 py-3 rounded-md font-semibold transition-all duration-300 inline-block;
+  }
+  
+  .btn-primary {
+    @apply bg-kong-red text-white hover:bg-red-700;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-kong-red text-kong-red hover:bg-kong-red hover:text-white;
+  }
+  
+  .card {
+    @apply bg-kong-black-800 rounded-lg overflow-hidden transition-all duration-300;
+  }
+  
+  .nav-link {
+    @apply text-kong-gray-200 hover:text-kong-red transition-colors duration-300;
+  }
+  
+  .form-input {
+    @apply w-full bg-kong-black-700 border border-kong-black-600 rounded-md px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-kong-red transition-all duration-300;
+  }
+}
+
+/* Swiper custom styles */
+.swiper-pagination-bullet {
+  background-color: white !important;
+  opacity: 0.5 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #E50914 !important;
+  opacity: 1 !important;
+}
+
+.swiper-button-next, 
+.swiper-button-prev {
+  color: #E50914 !important;
+}
+
+/* Program card hover effect */
+.program-card:hover .program-overlay {
+  opacity: 0.9;
+}
+
+.program-card:hover .program-icon {
+  transform: scale(1.1);
+}
+
+/* Testimonial card styles */
+.testimonial-card {
+  background: linear-gradient(145deg, #1A1A1A 0%, #222222 100%);
+}
+
+/* Header scroll style */
+.header-scrolled {
+  @apply bg-kong-black-900 shadow-lg;
+}
